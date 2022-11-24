@@ -5,16 +5,16 @@ from string import Template
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-MY_ADDRESS = 'my_address@example.com'
-TARGET_EMAIL = "something@something.lol"
-PASSWORD = 'mypassword'
-
-name = data['name']
-phone = data['phone']
-email = data['email']
-address = data['address']
-
-def send_mail():
+def send_mail_on_firestore_create():
+    MY_ADDRESS = 'my_address@example.com'
+    TARGET_EMAIL = "something@something.lol"
+    PASSWORD = 'mypassword'
+    
+    name = data['name']
+    phone = data['phone']
+    email = data['email']
+    address = data['address']
+    
     # set up the SMTP server
     s = smtplib.SMTP(host='example_host_address', port=example_port)
     s.starttls()
